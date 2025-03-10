@@ -1,0 +1,84 @@
+/* 🔹 Reset Default Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* 🔹 Course List Item */
+  .listItem {
+    list-style: none;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .listItem:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* 🔹 Image Styling */
+  .listItem img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    margin-bottom: 10px;
+  }
+  
+  /* 🔹 Course Name */
+  .LinkItems {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #1e293b;
+    text-align: center;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  /* 🔹 Remove Link Decorations */
+  a {
+    text-decoration: none;
+    display: inline-block;
+  }
+  
+  /* 🔹 Hover Effect */
+  a:hover .LinkItems {
+    color: #38bdf8;
+  }
+  
+  /* 🔹 Responsive Grid Layout */
+  .course-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    justify-items: center;
+  }
+  
+  /* 🔹 Responsive Design */
+  @media (max-width: 768px) {
+    .course-list {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  
+    .listItem {
+      padding: 12px;
+    }
+  
+    .LinkItems {
+      font-size: 1rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .course-list {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+  

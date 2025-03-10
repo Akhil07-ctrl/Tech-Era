@@ -1,0 +1,105 @@
+/* 🔹 General Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: "Poppins", sans-serif;
+    background-color: #f8fafc;
+    color: #1e293b;
+  }
+  
+  /* 🔹 Header Container */
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white; /* Darker for better contrast */
+    padding: 15px 40px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  /* 🔹 Improve Contrast */
+  .header:hover {
+    background-color: #526f9e;
+  }
+  
+  /* 🔹 Logo Styling */
+  .headerLogo {
+    width: 140px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+  
+  .headerLogo:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+  }
+  
+  /* 🔹 Heading Styling */
+  .header h1 {
+    color: #f8fafc; /* Brighter color for better visibility */
+    font-size: 1.8rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+  }
+  
+  /* 🔹 Navigation Links */
+  .nav-links {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: #e2e8f0; /* Lightened for better visibility */
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .nav-links a:hover {
+    color: #38bdf8;
+    text-decoration: underline;
+  }
+  
+  /* 🔹 Responsive Design */
+  @media (max-width: 768px) {
+    .header {
+      flex-direction: column;
+      align-items: center;
+      padding: 15px 20px;
+    }
+  
+    .nav-links {
+      margin-top: 10px;
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
+    }
+  
+    .header h1 {
+      font-size: 1.5rem;
+      text-align: center;
+    }
+  }
+  
+  /* 🔹 Fade-in Animation */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .header {
+    animation: fadeIn 0.6s ease-in-out;
+  }
+  

@@ -1,0 +1,175 @@
+/* 🔹 General Page Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: "Arial", sans-serif;
+    background-color: #f8fafc;
+    color: #1e293b;
+  }
+  
+  .home-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+  }
+  
+  /* 🔹 Loader Animation */
+  .spinner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    font-size: 1.5rem;
+    color: #1e293b;
+    animation: fadeIn 0.5s ease-in-out;
+  }
+  
+  /* 🔹 Course List Container */
+  .course-list-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    animation: fadeInUp 0.6s ease-in-out;
+  }
+  
+  .course-list-container h1 {
+    font-size: 2rem;
+    color: #1e293b;
+    margin-bottom: 20px;
+  }
+  
+  /* 🔹 Grid Layout for Courses (4 per row) */
+  .course-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columns */
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+    padding: 0;
+    list-style-type: none;
+  }
+  
+  /* 🔹 Individual Course Item */
+  .course-item {
+    background: #ffffff;
+    padding: 15px;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .course-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .course-item img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    margin-bottom: 10px;
+  }
+  
+  .course-item h3 {
+    font-size: 1.2rem;
+    color: #1e293b;
+    margin-bottom: 5px;
+  }
+  
+  .course-item p {
+    font-size: 0.9rem;
+    color: #475569;
+  }
+  
+  /* 🔹 Error Message */
+  .error-container {
+    text-align: center;
+    animation: fadeIn 0.5s ease-in-out;
+  }
+  
+  .error-container img {
+    width: 80%;
+    max-width: 400px;
+  }
+  
+  .error-container h1 {
+    font-size: 1.5rem;
+    color: #dc2626;
+  }
+  
+  .error-container p {
+    font-size: 1rem;
+    color: #475569;
+  }
+  
+  /* 🔹 Retry Button */
+  .retry-button {
+    background-color: #2563eb;
+    color: #ffffff;
+    border: none;
+    padding: 12px 20px;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    margin-top: 10px;
+  }
+  
+  .retry-button:hover {
+    background-color: #1d4ed8;
+  }
+  
+  /* 🔹 Animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* 🔹 Responsive Design */
+  
+  /* 🔹 Medium Screens (Tablets) - 2 columns */
+  @media (max-width: 992px) {
+    .course-list {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  /* 🔹 Small Screens (Phones) - 1 column */
+  @media (max-width: 600px) {
+    .course-list {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+  
