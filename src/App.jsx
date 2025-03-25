@@ -6,8 +6,8 @@ import './App.css';
 const App = () => (
   <Router basename='/Tech-Era'>
     <Routes>
-      <Route path="/home" element={<Home />} />
-      <Route path="/home/courses/:id" element={<CourseItemDetails />} />
+      <Route path="/" element={<Home />} />
+      <Route path="/courses/:id" element={<CourseItemDetails />} />
     </Routes>
   </Router>
 );
