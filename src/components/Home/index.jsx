@@ -3,7 +3,7 @@ import Header from '../Header'
 import Course from '../Course'
 import './index.css'
 
-export default class Home extends Component {
+class Home extends Component {
   state = {isLoading: true, isFailed: false, isSuccess: false, coursesList: []}
 
   componentDidMount() {
@@ -71,3 +71,5 @@ export default class Home extends Component {
     )
   }
 }
+
+export default Home

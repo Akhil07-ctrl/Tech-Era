@@ -43,6 +43,7 @@
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
     text-align: center;
     animation: fadeInUp 0.6s ease-in-out;
+    margin-top: 2rem;
   }
   
   .course-list-container h1 {

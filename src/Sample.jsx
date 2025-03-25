@@ -1,0 +1,1 @@
+<Route path="*" element={<Navigate to="/not-found" replace />} />

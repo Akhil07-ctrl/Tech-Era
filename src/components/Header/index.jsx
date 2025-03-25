@@ -7,7 +7,7 @@ export default class Header extends Component {
     return (
       <div className="header">
         <div>
-          <Link to="/">
+          <Link to="/home">
             <img
               className="headerLogo"
               src="https://assets.ccbp.in/frontend/react-js/tech-era/website-logo-img.png"
